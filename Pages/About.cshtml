@@ -1,0 +1,24 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <p>@Model.Message</p>
+</div>
+<div>
+    Notes:<br />
+    <ul>
+        <li>This program was built using Visual Studio Community 2019.</li>
+        <li>This site was published to Azure using the publishing tool.</li>
+        <li>Source code for this project is available through GitHub at <a href="https://github.com/gregorytapler" target="_blank">Gregory Tapler</a></li>
+    </ul>
+</div>
+<br />
+<div>
+    Also available is an API for Get and Post methods. View and test the API through the Swagger menu item.
+</div>
+
+

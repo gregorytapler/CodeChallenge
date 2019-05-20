@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-md-9">
+        <h2>Problem to solve: </h2>
+        Convert the string: @Model.StringsToConvert.Single(x => x.Key == 1).Value
+        <br /><br />
+        id<br />
+        created<br />
+        employee<br />
+        - id<br />
+        - firstname<br />
+        - employeeType<br />
+        -- id<br />
+        - lastname<br />
+        location<br /><br />
+        *Bonus (output in alphabetical order)<br />
+    </div>
+</div>
+
+<textarea rows="10" cols="30" placeholder="Result...">@Model.ConvertedString</textarea>
+
+<form method="post">
+    <input class="btn btn-primary" type="submit" value="Convert" asp-page-handler="Convert" asp-route-id="1" />
+    <input class="btn btn-primary" type="submit" value="Sorted" asp-page-handler="ConvertSorted" asp-route-id="1"/>
+</form>
+
