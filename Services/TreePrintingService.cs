@@ -15,9 +15,9 @@ namespace CodeChallenge.Services
             PrintedTree = new StringBuilder();
         }
 
-        internal void PrintTree(List<TreeNode> treeNodes, string level, bool isAlphabeticSort = false)
+        internal void PrintTree(List<TreeNode> treeNodes, string level, bool isSorted = false)
         {
-            var nodes = isAlphabeticSort ? treeNodes.OrderBy(o => o.Value).ToList() : treeNodes;
+            var nodes = isSorted ? treeNodes.OrderBy(o => o.Value).ToList() : treeNodes;
             foreach (var node in nodes)
             {
                 if (node.Value.Length > 0)
@@ -25,7 +25,7 @@ namespace CodeChallenge.Services
                     PrintedTree.Append($"{level} {node.Value}");
                     PrintedTree.AppendLine();
                 }
-                PrintTree(node.ChildNodes, $"{level}-", isAlphabeticSort);
+                PrintTree(node.ChildNodes, $"{level}-", isSorted);
             }
         }
     }
