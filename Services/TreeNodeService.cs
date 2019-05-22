@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace CodeChallenge.Services
 {
+    /// <summary>
+    /// TreeNode class to manage nested items
+    /// </summary>
     internal class TreeNode
     {
         internal TreeNode()

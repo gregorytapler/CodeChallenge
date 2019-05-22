@@ -5,15 +5,23 @@ using System.Threading.Tasks;
 
 namespace CodeChallenge.Services
 {
+    /// <summary>
+    /// Tree service to manage nested item string
+    /// </summary>
     public class TreeService
     {
         private string _treeData;
 
+        //Default constructor takes the string data
         internal TreeService(string treeData)
         {
             _treeData = treeData;
         }
 
+        /// <summary>
+        /// Parse the incoming string and build the tree
+        /// </summary>
+        /// <returns></returns>
         internal List<TreeNode> GetTree()
         {
             var nodeParent = new TreeNode { Parent = null, Value = "root", ChildNodes = new List<TreeNode>() };
